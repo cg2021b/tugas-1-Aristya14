@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-        <title>Tugas 2 Individu</title>
+        <title>Document</title>
         <script src="js/three.min.js"></script>
         <style>
                 * {
@@ -11,17 +11,29 @@
                         background-color: black;
                         color: white;
                 }
+         #light{
+            border-radius: 2px;
+            border: 3px solid;
+            color:cornflowerblue;
+            text-align: center;
+            font-size:large;
+        }
         </style>
 </head>
 
 <body>
+        <h2 style="text-align: center; color: lightblue; padding-top: 30px;"> Aristya Vika Wijaya - 05111940000233</h2>
+        <br>
+        <h2  style="text-align: center;color: lightblue;">Grafika Komputer B</h2>
+       <div style="position: relative;text-align: center; margin-top: 20px;">
         <select id="light">
-                <option value="0">Ambient</option>
+                <option value="0">AmbientLight</option>
                 <option value="1">DirectionalLight</option>
                 <option value="2">HemisphereLight</option>
                 <option value="3">PointLight</option>
                 <option value="4">Spotlight</option>
         </select>
+        </div>
 </body>
 
 </html>
@@ -40,7 +52,7 @@
         // membuat sphere
         let sphere;
         let createSphere = function () {
-                let geometry = new THREE.SphereGeometry(0.5, 8, 8);
+                let geometry = new THREE.SphereGeometry(0.3, 6, 6);
                 let material = new THREE.MeshToonMaterial({ color: 0xff0000, wireframe: true, });
                 sphere = new THREE.Mesh(geometry, material);
                 scene.add(sphere);
@@ -52,7 +64,7 @@
         // membuat box
         let box;
         let createBox = function () {
-                let geometry = new THREE.BoxGeometry(0.7, 0.5, 0.5);
+                let geometry = new THREE.BoxGeometry(0.2, 0.4, 0.5);
                 let material = new THREE.MeshPhongMaterial({ color: 0x0095DD });
                 box = new THREE.Mesh(geometry, material);
                 scene.add(box);
@@ -91,7 +103,7 @@
         // membuat cone
         let cone;
         let createCone = function () {
-                let geometry = new THREE.ConeGeometry(0.5, 0.8, 19, 15);
+                let geometry = new THREE.ConeGeometry(0.3, 0.3, 10, 10);
                 let material = new THREE.MeshStandardMaterial({ color: 0xff0000, wireframe: true, roughness: 0.05 });
                 cone = new THREE.Mesh(geometry, material);
                 scene.add(cone);
@@ -99,11 +111,11 @@
         //lokasi cone
         createCone();
         cone.position.x = 1.5;
-        cone.position.y = -0.5;
+        cone.position.y = -0.25;
 
         // membuat tetrahedron
         let createTetrahedron = function () {
-                let tetrahedronGeometry = new THREE.TetrahedronGeometry(0.5);
+                let tetrahedronGeometry = new THREE.TetrahedronGeometry(0.3);
                 let tetrahedronMaterial = new THREE.MeshPhysicalMaterial({ color: 0xff0000 });
                 tetrahedron = new THREE.Mesh(tetrahedronGeometry, tetrahedronMaterial);
                 scene.add(tetrahedron);
@@ -111,11 +123,11 @@
         //lokasi tetrahedron
         createTetrahedron();
         tetrahedron.position.x = -1.25;
-        tetrahedron.position.y = -0.5;
+        tetrahedron.position.y = -0.25;
 
         // octahedron
         let createOctahedron = function () {
-                let octahedronGeometry = new THREE.OctahedronGeometry(0.5);
+                let octahedronGeometry = new THREE.OctahedronGeometry(0.3);
                 let octahedronMaterial = new THREE.MeshStandardMaterial({ color: 0x619eff, metalness: 0.5, roughness: 0.5 });
                 octahedron = new THREE.Mesh(octahedronGeometry, octahedronMaterial);
                 scene.add(octahedron);
@@ -123,7 +135,7 @@
         //lokasi octahedron
         createOctahedron();
         octahedron.position.x = 0;
-        octahedron.position.y = -0.5;
+        octahedron.position.y = -0.25;
 
         //pencahayaan
         let lightsChange = function () {
@@ -174,7 +186,7 @@
                 sphere.rotation.x += 0.01;
                 sphere.rotation.y += 0.01;
                 //rotasi box
-                box.rotation.x += 0.1;
+                box.rotation.y += 0.1;
                 //rotasi cylinder
                 cylinder.rotation.x += 0.05;
                 //rotasi torus
