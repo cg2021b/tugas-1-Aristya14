@@ -4,6 +4,7 @@
 <head>
         <title>Tugas 2 Individu</title>
         <script src="js/three.min.js"></script>
+        <script src="js/OrbitControls.js"></script>
         <style>
                 * {
                         margin: 0;
@@ -177,8 +178,9 @@
         // 4. create the renderer     
         renderer = new THREE.WebGLRenderer();
         renderer.setSize(window.innerWidth, window.innerHeight);
-
         document.body.appendChild(renderer.domElement);
+        const controls = new THREE.OrbitControls(camera, renderer.domElement);
+        renderer.render(scene, camera, controls);
 
         // main animation loop - calls 50-60 in a second.
         let mainLoop = function () {
