@@ -1,0 +1,95 @@
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background:url("https://img.djawanews.com/HhuJqXokLhxpsAVCuI89vvVZQwc9Mz_TibBMTa5HVkU/fill/600/338/no/1/aHR0cHM6Ly9kamF3YW5ld3MuY29tL3Bob3Rvcy90ZWtub2xvZ2kvNzlmN2M0OTI3NTVhYzEwMjA3ZTYyMmEzMmI4MTE5ZGQ4ZmVkNGVhMy5qcGc.jpg");
+}
+
+h1 {
+  margin: 20px 20px;
+  text-align: center;
+  color: white;
+}
+
+h2{
+   color:white;
+   text-align: center;
+ }
+
+.ket{
+  color:yellow;
+  font-style: italic;
+  font-size: medium;
+}
+p{
+  color: white;
+  font-size:x-large;
+  font-weight: 1000;
+}
+
+.webgl {
+  border: 2px solid white;
+}
+
+.lighting-conf {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.choices {
+  margin: 20px 0;
+}
+
+.choice {
+  margin: 0 20px;
+}
+
+.preview-canvas {
+  /* position: relative; */
+  /* margin: 20px 0; */
+  margin: 30px 0;
+}
+.webgl {
+  /* position: absolute;
+  margin: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 0%); */
+  margin: 0 4%;
+}
+
+.status {
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
+
+}
+.keterangan {
+  text-align: center;
+  position: relative;
+}
+
+#play-button {
+  padding: 10px 25px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 0;
+}
+
+#gameover {
+  display: none;
+  text-align: center;
+  color: red;
+}
