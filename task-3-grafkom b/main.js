@@ -6,8 +6,8 @@ const colorList = [
   "rgb(255, 51, 255)", "rgb(0, 140, 0)", "rgb(255, 3, 110)",
   //merah, coklat, navy
   "rgb(255, 0, 0)", "rgb(126, 70, 34)", "rgb(23, 39, 137)",
-  //hitam, maroon
-  "rgb(1, 1, 1)", "rgb(88, 1, 1)",
+  //maroon
+  "rgb(88, 1, 1)",
 ]
 
 const randomInRange = (from, to, convertInt = false) => {
@@ -64,7 +64,9 @@ const canvas = document.querySelector("canvas.webgl");
 
 //Scene
 const scene = new THREE.Scene();
-scene.background = new THREE.Color("rgb(222, 173, 255)");
+const loader = new THREE.TextureLoader();
+const bgTexture = loader.load('https://ak.picdn.net/shutterstock/videos/1014877267/thumb/1.jpg');
+scene.background = bgTexture;
 
 // // //lighting
 scene.add(new THREE.AmbientLight(0xffffbb, 0.7));
